@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "3eaf88ed-eb69-4439-a0e3-08e806db65df",
+		"name": "Lab 4.02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15401921"
+	},
+	"item": [
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "Doctor find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor findByStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-by-status/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-by-status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "ON"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-by-id?id=564134",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "564134"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor findByDepartment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-by-department/:department",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-by-department",
+								":department"
+							],
+							"variable": [
+								{
+									"key": "department",
+									"value": "IMMUNOLOGY"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Patient find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-id/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-id",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findByDateBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-date/:start/:end",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-date",
+								":start",
+								":end"
+							],
+							"variable": [
+								{
+									"key": "start",
+									"value": "1990-12-31"
+								},
+								{
+									"key": "end",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findByDoctorStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-status/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "OFF"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findByDoctorDepartment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-status/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "OFF"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "a34aec2a-bd3b-46a9-83f1-a3ee3fcd321d",
+		"name": "Lab 4.04",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24663260"
+	},
+	"item": [
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "Doctor find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor findByStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-by-status/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-by-status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "ON"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-by-id?id=564134",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "564134"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor findByDepartment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/find-by-department/:department",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"find-by-department",
+								":department"
+							],
+							"variable": [
+								{
+									"key": "department",
+									"value": "IMMUNOLOGY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\":\"1\",\n    \"name\":\"Jose\",\n    \"department\":\"CARDIOLOGY\",\n    \"status\":\"OFF\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/doctor/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/doctor/update-status/:doctorId/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"update-status",
+								":doctorId",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "doctorId",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "OFF"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status doctor DTO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doctorId\":1,\n    \"status\":\"OFF\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/doctor/update-status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"doctor",
+								"update-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Patient find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-id/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-id",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findByDateBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-date/:start/:end",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-date",
+								":start",
+								":end"
+							],
+							"variable": [
+								{
+									"key": "start",
+									"value": "1990-12-31"
+								},
+								{
+									"key": "end",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findByDoctorStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-status/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "OFF"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patient findByDoctorDepartment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/find-by-status/:status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"find-by-status",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "OFF"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert patient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Jose\",\n    \"dateOfBirth\":\"2022-12-31\",\n    \"admittedBy\" :{\n        \"employeeId\":1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patient/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update patient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Jose\",\n    \"dateOfBirth\":\"2022-12-31\",\n    \"admittedBy\" :1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/patient/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patient/delete/:patientId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patient",
+								"delete",
+								":patientId"
+							],
+							"variable": [
+								{
+									"key": "patientId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
